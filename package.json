@@ -1,0 +1,37 @@
+{
+  "name": "@digital-taco/wake",
+  "version": "0.1.0",
+  "description": "Observable JS objects you can subscribe to (literally!)",
+  "files": ["dist/**", "!*.test.js"],
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest --watchAll --testPathPattern=dist",
+    "test:ci": "CI=true jest --testPathPattern=dist",
+    "start": "npx tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-taco/wake.git"
+  },
+  "keywords": [
+    "js",
+    "objects",
+    "observation",
+    "subscription",
+    "pubsub",
+    "easy"
+  ],
+  "author": "kyle-west",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digital-taco/wake/issues"
+  },
+  "homepage": "https://github.com/digital-taco/wake#readme",
+  "devDependencies": {
+    "@types/jest": "^29.1.2",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "jest": "^29.2.0"
+  }
+}
