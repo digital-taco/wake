@@ -1,5 +1,14 @@
-import { test } from './index'
+import { ObservableObject } from './index'
 
-it ('should be testable', () => {
-  expect(test()).toBe(true)
+interface IObject {
+  [key: PropertyKey]: any;
+}
+
+it ('should fire an observer function when children change', () => {
+  const handler = jest.fn()
+  const object = new ObservableObject(handler) as IObject
+
+  object.test = true
+  expect(handler).toHaveBeenCalledTimes(1)
+  expect(object).toEqual({ test: true })
 })
